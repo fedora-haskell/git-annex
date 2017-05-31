@@ -11,8 +11,14 @@ Url:            https://hackage.haskell.org/package/%{name}
 Source0:        https://hackage.haskell.org/package/%{name}-%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  ghc
-BuildRequires:  file-devel
 BuildRequires:  stack
+BuildRequires:  git-core
+BuildRequires:  rsync
+# magic
+BuildRequires:  file-devel
+BuildRequires:  zlib-devel
+
+Requires:       git-core
 
 %description
 Git-annex allows managing files with git, without checking the file contents
